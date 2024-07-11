@@ -50,7 +50,9 @@ public class Timer : MonoBehaviour
         {
             Restart();
         }
-        else if (Input.GetMouseButtonDown(0) && (_coroutineCounter != null)) {
+        else 
+        if (Input.GetMouseButtonDown(0) && (_coroutineCounter != null)) 
+        {
             Stop();
             _coroutineCounter = null;
         }
