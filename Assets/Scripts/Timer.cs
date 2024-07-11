@@ -46,12 +46,13 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && (_text.enabled = !_text.enabled))
+        if (Input.GetMouseButtonDown(0) && (_coroutineCounter == null))
         {
             Restart();
         }
-        else if (Input.GetMouseButtonDown(0) && (_text.enabled == _text.enabled)) {
+        else if (Input.GetMouseButtonDown(0) && (_coroutineCounter != null)) {
             Stop();
+            _coroutineCounter = null;
         }
     }
 }
